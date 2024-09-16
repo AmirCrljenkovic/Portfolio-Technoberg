@@ -9,28 +9,28 @@ import React from "react";
 const Team = () => {
     const teamMembers = [
         {
-            name: "Alice Johnson",
+            name: "Qutayba Ali",
             role: "Frontend Developer",
-            image: "https://via.placeholder.com/150", // Replace with local image if needed
-            bio: "Alice specializes in creating responsive and interactive web interfaces with React.",
+            image: "https://via.placeholder.com/150", 
+            bio: "Qutayba specializes in creating responsive and interactive web interfaces with React.",
         },
         {
-            name: "Bob Smith",
+            name: "Leon Timmerman",
             role: "Backend Developer",
-            image: "https://via.placeholder.com/150", // Replace with local image if needed
-            bio: "Bob is an expert in building scalable server-side applications using Node.js and Express.",
+            image: "https://via.placeholder.com/150", 
+            bio: "Leon is an expert in building scalable server-side applications using Node.js and Express.",
         },
         {
-            name: "Clara Lee",
+            name: "Erik Spijkerman",
             role: "Full Stack Developer",
-            image: "https://via.placeholder.com/150", // Replace with local image if needed
-            bio: "Clara has a strong background in both frontend and backend development, with a focus on React and MongoDB.",
+            image: "https://via.placeholder.com/150", 
+            bio: "Erik has a strong background in both frontend and backend development, with a focus on React and MongoDB.",
         },
         {
-            name: "David Kim",
+            name: "Philip Heurtaux",
             role: "UI/UX Designer",
             image: "https://via.placeholder.com/150",
-            bio: "David is a creative designer focused on creating intuitive and user-friendly interfaces.",
+            bio: "Philip is a creative designer focused on creating intuitive and user-friendly interfaces.",
         },
     ];
 
