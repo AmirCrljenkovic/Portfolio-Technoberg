@@ -63,7 +63,7 @@ const Projects = () => {
 
                 <div className="text-center mt-8">
                     <Link
-                        to="/all-projects"
+                        to="/projects"
                         className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded"
                     >
                         See All

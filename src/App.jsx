@@ -2,13 +2,13 @@ import React from "react";
 import './App.css';
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import ProjectsPage from "./pages/ProjectsPage"; // Make sure to adjust the path if necessary
+import ProjectsPage from "./pages/ProjectsPage"; 
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/projects" element={<ProjectsPage />} /> {/* Add this Route */}
+      <Route path="/projects" element={<ProjectsPage />} />
     </Routes>
   );
 };

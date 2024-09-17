@@ -1,6 +1,5 @@
 import React from "react";
 
-// Import local images if available (adjust paths as needed)
 // import member1Image from "../assets/team/member1.jpg";
 // import member2Image from "../assets/team/member2.jpg";
 // import member3Image from "../assets/team/member3.jpg";
