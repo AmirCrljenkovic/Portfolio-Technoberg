@@ -16,7 +16,7 @@ const Header = () => {
     };
 
     return (
-        <header className="bg-gray-900 dark:bg-gray-100 text-white dark:text-black p-4">
+        <header className="sticky top-0 z-50 bg-gray-900 dark:bg-gray-100 text-white dark:text-black p-4 shadow-md">
             <div className="container mx-auto flex justify-between items-center">
                 <h1 className="text-2xl font-bold">Technoberg</h1>
                 <nav className="space-x-4">
