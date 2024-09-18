@@ -10,19 +10,19 @@ const Team = () => {
         {
             name: "Qutayba Ali",
             role: "Frontend Developer",
-            image: "https://via.placeholder.com/150", 
+            image: "https://via.placeholder.com/150",
             bio: "Qutayba specializes in creating responsive and interactive web interfaces with React.",
         },
         {
             name: "Leon Timmerman",
             role: "Backend Developer",
-            image: "https://via.placeholder.com/150", 
+            image: "https://via.placeholder.com/150",
             bio: "Leon is an expert in building scalable server-side applications using Node.js and Express.",
         },
         {
             name: "Erik Spijkerman",
             role: "Full Stack Developer",
-            image: "https://via.placeholder.com/150", 
+            image: "https://via.placeholder.com/150",
             bio: "Erik has a strong background in both frontend and backend development, with a focus on React and MongoDB.",
         },
         {

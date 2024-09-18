@@ -8,21 +8,24 @@ import MissionVision from "../components/MissionVision";
 import Projects from "../components/Projects";
 import Services from "../components/Services";
 import ClientReviews from "../components/ClientReviews";
-
-
-
+import Footer from "../components/Footer";
 
 const HomePage = () => {
-    return <div className="min-h-screen flex flex-col">
-        <Header />
-        <Hero />
-        <About />
-        <Team />
-        <MissionVision />
-        <Projects />
-        <Services />
-        <ClientReviews />
-    </div>
+    return (
+        <div className="min-h-screen flex flex-col justify-between">
+            <div>
+                <Header />
+                <Hero />
+                <About />
+                <Team />
+                <MissionVision />
+                <Projects />
+                <Services />
+                <ClientReviews />
+            </div>
+            <Footer />
+        </div>
+    );
 }
 
-export default HomePage
+export default HomePage;

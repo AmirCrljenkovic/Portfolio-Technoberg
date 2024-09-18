@@ -1,9 +1,8 @@
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Header from "../components/Header";
 import React, { useState, useEffect } from "react";
+import Header from "../components/Header";
 import Hero from "../components/Hero";
-import ExampleProj from "../img/ExampleProject.webp"; 
+import Footer from "../components/Footer";
+import ExampleProj from "../img/ExampleProject.webp";
 
 const projects = [
   {
@@ -83,7 +82,6 @@ const projects = [
 const ProjectsPage = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
-  
   useEffect(() => {
     if (selectedProject) {
       document.body.style.overflow = "hidden";
@@ -109,8 +107,7 @@ const ProjectsPage = () => {
         <h1 className="text-3xl font-bold">Projects</h1>
       </div>
 
-      
-      <div className="flex-grow px-4 lg:px-20">
+      <div className="flex-grow px-4 lg:px-20 mb-12"> {/* Added margin-bottom */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div
@@ -130,7 +127,6 @@ const ProjectsPage = () => {
         </div>
       </div>
 
-      
       {selectedProject && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 overflow-y-auto">
           <div className="bg-white rounded-lg p-8 relative w-full max-w-4xl h-full overflow-y-auto">
@@ -163,6 +159,9 @@ const ProjectsPage = () => {
           </div>
         </div>
       )}
+
+
+      <Footer />
     </div>
   );
 };

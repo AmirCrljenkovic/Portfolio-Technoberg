@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import icoon from "../img/icon.png"; 
+import icoon from "../img/icon.png";
 
 const services = [
     { title: "Python", description: "We offer robust Python development services for web, data science, and automation." },
@@ -33,7 +33,7 @@ const Services = () => {
                         <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
                             <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                             <p className="text-gray-600 mb-4">{service.description}</p>
-                            <button 
+                            <button
                                 onClick={() => handleShowPopup(service)}
                                 className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
                             >
@@ -45,7 +45,7 @@ const Services = () => {
                 {isPopupVisible && currentService && (
                     <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
                         <div className="bg-white p-6 rounded-lg relative w-full max-w-md max-h-screen-lg flex flex-col items-center">
-                            <button 
+                            <button
                                 onClick={handleClosePopup}
                                 className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl"
                             >
