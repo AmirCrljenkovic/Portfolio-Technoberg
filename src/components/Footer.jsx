@@ -1,10 +1,13 @@
+import icoon from "../img/icon.png";
+import logo from "../img/logo1.png"
+
 const Footer = () => {
     return (
         <footer className="bg-gray-900 text-gray-400 py-8">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 px-6">
                 {/* Logo on the left */}
                 <div className="flex-shrink-0">
-                    <img src="/path-to-your-logo/logo.png" alt="Company Logo" className="h-12" />
+                    <img src={logo} alt="Company Logo" className="h-12" />
                 </div>
 
 
@@ -23,7 +26,7 @@ const Footer = () => {
                         rel="noopener noreferrer"
                         className="hover:text-white transition duration-200 ease-in-out"
                     >
-                        <img src="../img/icon.png" alt="Website" className="h-6 w-6" />
+                        <img src={icoon} alt="Website" className="h-10 w-10" />
                     </a>
 
                     <a
@@ -32,7 +35,7 @@ const Footer = () => {
                         rel="noopener noreferrer"
                         className="hover:text-white transition duration-200 ease-in-out"
                     >
-                        <img src="/path-to-linkedin-icon.png" alt="LinkedIn" className="h-6 w-6" />
+                        <img src={icoon} alt="LinkedIn" className="h-10 w-10" />
                     </a>
 
                     <a
@@ -41,7 +44,7 @@ const Footer = () => {
                         rel="noopener noreferrer"
                         className="hover:text-white transition duration-200 ease-in-out"
                     >
-                        <img src="/path-to-facebook-icon.png" alt="Facebook" className="h-6 w-6" />
+                        <img src={icoon} alt="Facebook" className="h-10 w-10" />
                     </a>
                 </div>
             </div>
