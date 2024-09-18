@@ -10,7 +10,7 @@ const Footer = () => {
 
                 <div className="text-center md:text-left">
                     <p className="text-sm">
-                        &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+                        &copy; {new Date().getFullYear()} Techoberg. All rights reserved.
                     </p>
                 </div>
 
