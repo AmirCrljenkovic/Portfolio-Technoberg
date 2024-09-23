@@ -107,7 +107,7 @@ const ProjectsPage = () => {
         <h1 className="text-3xl font-bold">Projects</h1>
       </div>
 
-      <div className="flex-grow px-4 lg:px-20 mb-12"> {/* Added margin-bottom */}
+      <div className="flex-grow px-4 lg:px-20 mb-12"> 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div
