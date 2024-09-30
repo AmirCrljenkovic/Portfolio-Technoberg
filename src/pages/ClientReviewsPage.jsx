@@ -65,7 +65,7 @@ const ClientReviewsPage = () => {
               style={{ minHeight: '300px' }}
             >
               <div className="flex justify-between items-start w-full">
-                {/* Left Section: Company Name and Business Description */}
+                
                 <div>
                   <h2 className="text-xl font-bold text-gray-800">
                     {review.companyName}
@@ -75,7 +75,7 @@ const ClientReviewsPage = () => {
                   </p>
                 </div>
 
-                {/* Right Section: Company Logo */}
+                
                 <img
                   src={review.logo}
                   alt={`${review.companyName} logo`}
@@ -83,7 +83,7 @@ const ClientReviewsPage = () => {
                 />
               </div>
 
-              {/* Review Button */}
+              
               <button
                 onClick={() => openModal(review)}
                 className="mt-4 px-4 py-2 bg-gradient-to-r from-[#F3911B] to-[#E6215A] text-white rounded-full hover:from-[#E6215A] hover:to-[#F3911B] transition-all duration-1000 ease-in-out"
@@ -98,7 +98,7 @@ const ClientReviewsPage = () => {
         </div>
       </div>
 
-      {/* Modal for displaying review */}
+      
       {selectedReview && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
           <div className="bg-white rounded-lg p-8 w-full max-w-md relative">
