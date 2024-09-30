@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
-import Hero from "../components/Hero";
+import Hero from "../components/HeroProjects";
 import Footer from "../components/Footer";
 import ExampleProj from "../img/ExampleProject.webp";
 

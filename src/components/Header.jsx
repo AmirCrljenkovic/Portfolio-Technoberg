@@ -16,7 +16,7 @@ const Header = () => {
     };
 
     return (
-        <header className="sticky top-0 z-50 bg-gray-900 dark:bg-gray-100 text-white dark:text-black p-4 shadow-md">
+        <header className="sticky top-0 z-50 bg-gray-100 dark:bg-darkbg text-black dark:text-white p-4 shadow-md">
             <div className="container mx-auto flex justify-between items-center">
                 <h1 className="text-2xl font-bold">Technoberg</h1>
                 <nav className="space-x-4">
@@ -27,7 +27,8 @@ const Header = () => {
                 </nav>
                 <button
                     onClick={toggleDarkMode}
-                    className="ml-4 p-2 bg-gray-800 dark:bg-gray-300 text-white dark:text-black rounded"
+                    className={`ml-4 p-2 rounded ${darkMode ? 'bg-[#31363F] text-white' : 'bg-gray-800 text-white'
+                        }`}
                 >
                     {darkMode ? "Light Mode" : "Dark Mode"}
                 </button>

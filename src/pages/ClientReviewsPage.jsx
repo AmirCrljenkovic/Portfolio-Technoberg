@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-import HeroImage from "../components/Hero";
+import HeroImage from "../components/HeroReviews";
 import Footer from "../components/Footer";
 import logo from "../img/logo1.png";
 

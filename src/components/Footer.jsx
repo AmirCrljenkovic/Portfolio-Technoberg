@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="bg-gray-900 text-gray-400 py-8">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 px-6">
-                {/* Logo on the left */}
+
                 <div className="flex-shrink-0">
                     <img src={logo} alt="Company Logo" className="h-12" />
                 </div>
