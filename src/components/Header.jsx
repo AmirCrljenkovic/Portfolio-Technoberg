@@ -13,11 +13,12 @@ const Header = () => {
     const [darkMode, setDarkMode] = useState(false);
     const navigate = useNavigate();
 
+    
     useEffect(() => {
         if (darkMode) {
-            document.documentElement.classList.add('dark');
+            document.documentElement.classList.add('dark'); 
         } else {
-            document.documentElement.classList.remove('dark');
+            document.documentElement.classList.remove('dark'); 
         }
     }, [darkMode]);
 
@@ -79,7 +80,7 @@ const Header = () => {
                     </a>
                 </nav>
 
-               
+                
                 <div
                     onClick={toggleDarkMode}
                     className="relative w-12 h-6 flex items-center bg-gray-300 dark:bg-[#31363F] rounded-full p-1 cursor-pointer transition-colors duration-300"
@@ -91,14 +92,14 @@ const Header = () => {
                         className={`absolute h-4 w-4 transition-opacity duration-300 left-1 ${darkMode ? 'opacity-100' : 'opacity-50'}`}
                     />
 
-                   
+                    
                     <img
                         src={MoonIcon}
                         alt="Dark Mode"
                         className={`absolute h-4 w-4 transition-opacity duration-300 right-1 ${darkMode ? 'opacity-50' : 'opacity-100'}`}
                     />
 
-                   
+                    
                     <div
                         className={`h-5 w-5 bg-white rounded-full shadow-md transform transition-transform duration-300 ${darkMode ? 'translate-x-6' : ''}`}
                     />
