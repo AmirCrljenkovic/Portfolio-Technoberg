@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import project1 from "../assets/project1.jpg";
 
-
 const Projects = () => {
     const settings = {
         dots: true,
@@ -40,9 +39,9 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="bg-gray-100 py-12">
+        <section id="projects" className="bg-gray-100 dark:bg-[#222831] py-12">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+                <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center">
                     Onze Projecten
                 </h2>
                 <div className="max-w-4xl mx-auto">
@@ -54,8 +53,10 @@ const Projects = () => {
                                     alt={project.title}
                                     className="w-full h-64 object-cover rounded-lg mb-4"
                                 />
-                                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                                <p className="text-gray-600">{project.description}</p>
+                                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                                    {project.title}
+                                </h3>
+                                <p className="text-gray-600 dark:text-gray-300">{project.description}</p>
                             </div>
                         ))}
                     </Slider>
@@ -64,7 +65,7 @@ const Projects = () => {
                 <div className="text-center mt-8">
                     <Link
                         to="/projects"
-                        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded"
+                        className="bg-blue-500 dark:bg-blue-700 hover:bg-blue-600 dark:hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded"
                     >
                         See All
                     </Link>

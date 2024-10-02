@@ -25,17 +25,17 @@ const Services = () => {
     };
 
     return (
-        <section id="services" className="bg-gray-100 py-12">
+        <section id="services" className="bg-gray-100 dark:bg-[#222831] py-12">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Onze Diensten</h2>
+                <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center">Onze Diensten</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {services.map((service, index) => (
-                        <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
-                            <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                            <p className="text-gray-600 mb-4">{service.description}</p>
+                        <div key={index} className="bg-white dark:bg-[#31363F] p-6 rounded-lg shadow-md text-center">
+                            <h3 className="text-xl font-semibold mb-2 dark:text-white">{service.title}</h3>
+                            <p className="text-gray-600 dark:text-gray-300 mb-4">{service.description}</p>
                             <button
                                 onClick={() => handleShowPopup(service)}
-                                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+                                className="bg-blue-500 dark:bg-[#222831] hover:bg-blue-600 dark:hover:bg-[#393E46] text-white font-semibold py-2 px-4 rounded transition-colors duration-300"
                             >
                                 Meer info
                             </button>
@@ -44,17 +44,17 @@ const Services = () => {
                 </div>
                 {isPopupVisible && currentService && (
                     <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-                        <div className="bg-white p-6 rounded-lg relative w-full max-w-md max-h-screen-lg flex flex-col items-center">
+                        <div className="bg-white dark:bg-[#31363F] p-6 rounded-lg relative w-full max-w-md max-h-screen-lg flex flex-col items-center">
                             <button
                                 onClick={handleClosePopup}
-                                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl"
+                                className="absolute top-4 right-4 text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-200 text-2xl"
                             >
                                 &times;
                             </button>
                             <img src={icoon} alt="Service Icon" className="w-24 h-24 mb-4" />
-                            <h3 className="text-2xl font-semibold mb-2">{currentService.title}</h3>
-                            <div className="bg-gray-200 p-4 rounded-lg shadow-md w-full max-w-xs text-center">
-                                <p className="text-gray-800 text-base">{currentService.description}</p>
+                            <h3 className="text-2xl font-semibold mb-2 dark:text-white">{currentService.title}</h3>
+                            <div className="bg-gray-200 dark:bg-[#393E46] p-4 rounded-lg shadow-md w-full max-w-xs text-center">
+                                <p className="text-gray-800 dark:text-gray-300 text-base">{currentService.description}</p>
                             </div>
                         </div>
                     </div>

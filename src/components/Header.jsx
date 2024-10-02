@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-
+// Import the logos
 import LightLogo from '../img/Wit-liggend.png';
 import DarkLogo from '../img/Rood-liggend.png';
 
