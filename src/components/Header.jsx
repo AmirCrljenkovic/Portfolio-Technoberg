@@ -5,6 +5,10 @@ import { useNavigate } from "react-router-dom";
 import LightLogo from '../img/Wit-liggend.png';
 import DarkLogo from '../img/Rood-liggend.png';
 
+
+import SunIcon from '../img/sun.png';  
+import MoonIcon from '../img/moon.png'; 
+
 const Header = () => {
     const [darkMode, setDarkMode] = useState(false);
     const navigate = useNavigate();
@@ -28,6 +32,7 @@ const Header = () => {
     return (
         <header className="sticky top-0 z-50 bg-gray-100 dark:bg-darkbg text-black dark:text-white p-4 shadow-md">
             <div className="container mx-auto flex justify-between items-center">
+                
                 
                 <img
                     src={darkMode ? LightLogo : DarkLogo}
@@ -74,12 +79,30 @@ const Header = () => {
                     </a>
                 </nav>
 
-                <button
+               
+                <div
                     onClick={toggleDarkMode}
-                    className={`ml-4 p-2 rounded ${darkMode ? 'bg-[#31363F] text-white' : 'bg-gray-800 text-white'}`}
+                    className="relative w-12 h-6 flex items-center bg-gray-300 dark:bg-[#31363F] rounded-full p-1 cursor-pointer transition-colors duration-300"
                 >
-                    {darkMode ? "Light Mode" : "Dark Mode"}
-                </button>
+                    
+                    <img
+                        src={SunIcon}
+                        alt="Light Mode"
+                        className={`absolute h-4 w-4 transition-opacity duration-300 left-1 ${darkMode ? 'opacity-100' : 'opacity-50'}`}
+                    />
+
+                   
+                    <img
+                        src={MoonIcon}
+                        alt="Dark Mode"
+                        className={`absolute h-4 w-4 transition-opacity duration-300 right-1 ${darkMode ? 'opacity-50' : 'opacity-100'}`}
+                    />
+
+                   
+                    <div
+                        className={`h-5 w-5 bg-white rounded-full shadow-md transform transition-transform duration-300 ${darkMode ? 'translate-x-6' : ''}`}
+                    />
+                </div>
             </div>
         </header>
     );
