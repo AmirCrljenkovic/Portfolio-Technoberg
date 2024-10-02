@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+
+import LightLogo from '../img/Wit-liggend.png';
+import DarkLogo from '../img/Rood-liggend.png';
 
 const Header = () => {
     const [darkMode, setDarkMode] = useState(false);
@@ -24,16 +28,20 @@ const Header = () => {
     return (
         <header className="sticky top-0 z-50 bg-gray-100 dark:bg-darkbg text-black dark:text-white p-4 shadow-md">
             <div className="container mx-auto flex justify-between items-center">
-                <h1 className="text-2xl font-bold">Technoberg</h1>
+                
+                <img
+                    src={darkMode ? LightLogo : DarkLogo}
+                    alt="Technoberg Logo"
+                    className="h-10 w-auto"
+                />
+                
                 <nav className="space-x-4">
-
                     <button
                         onClick={() => goToHomeAndScroll("home")}
                         className="hover:text-gray-400 cursor-pointer"
                     >
                         Home
                     </button>
-
 
                     <button
                         onClick={() => goToHomeAndScroll("about")}
@@ -42,7 +50,6 @@ const Header = () => {
                         About
                     </button>
 
-
                     <button
                         onClick={() => goToHomeAndScroll("projects")}
                         className="hover:text-gray-400 cursor-pointer"
@@ -50,14 +57,12 @@ const Header = () => {
                         Projects
                     </button>
 
-
                     <button
                         onClick={() => goToHomeAndScroll("client-reviews")}
                         className="hover:text-gray-400 cursor-pointer"
                     >
-                        Client Reviews
+                        Reviews
                     </button>
-
 
                     <a
                         href="https://www.technoberg.nl/contact/"
@@ -68,6 +73,7 @@ const Header = () => {
                         Contact
                     </a>
                 </nav>
+
                 <button
                     onClick={toggleDarkMode}
                     className={`ml-4 p-2 rounded ${darkMode ? 'bg-[#31363F] text-white' : 'bg-gray-800 text-white'}`}
