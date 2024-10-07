@@ -4,7 +4,7 @@ import LogoRood from "../img/Rood-liggend.png";
 const Banner = () => {
     return (
         <div
-            className="relative w-screen h-16 overflow-hidden dark:bg-gray-900"
+            className="relative w-screen h-16 overflow-hidden dark:bg-[#222831]"
             style={{
                 background: 'linear-gradient(to right, #F3911B, #E6215A)',
                 transform: 'rotate(-5deg)',
