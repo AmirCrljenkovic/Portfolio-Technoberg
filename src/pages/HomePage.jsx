@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Banner from "../components/Banner"
 import Team from "../components/Team";
 import MissionVision from "../components/MissionVision";
 import Projects from "../components/Projects";
@@ -17,6 +18,7 @@ const HomePage = () => {
                 <Header />
                 <Hero />
                 <About />
+                <Banner />
                 <Team />
                 <MissionVision />
                 <Projects />
