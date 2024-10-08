@@ -71,7 +71,7 @@ const Header = () => {
                     </button>
 
                     <a
-                        href="https://www.technoberg.nl/contact/"
+                        href="https://www.technoberg.nl/contact-us/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-gray-400"

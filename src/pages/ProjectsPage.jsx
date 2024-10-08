@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Hero from "../components/HeroProjects";
 import Footer from "../components/Footer";
 import ExampleProj from "../img/ExampleProject.webp";
+import ContactRedirect from "../components/ContactRedirect"; // Import the ContactRedirect component
 
 const projects = [
   {
@@ -160,7 +161,7 @@ const ProjectsPage = () => {
         </div>
       )}
 
-
+      <ContactRedirect /> {/* Add the ContactRedirect section here */}
       <Footer />
     </div>
   );
