@@ -1,30 +1,38 @@
 import icoon from "../img/icon.png";
-import logo from "../img/logo1.png"
+import logoLight from "../img/Rood-liggend.png";  
+import logoDark from "../img/Wit-liggend.png";   
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-900 text-gray-400 py-8">
+        <footer className="bg-white dark:bg-[#222831] text-gray-800 dark:text-gray-400 py-8">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 px-6">
 
                 <div className="flex-shrink-0">
-                    <img src={logo} alt="Company Logo" className="h-12" />
+                    
+                    <img
+                        src={logoLight}
+                        alt="Company Logo"
+                        className="h-12 dark:hidden" 
+                    />
+                    <img
+                        src={logoDark}
+                        alt="Company Logo"
+                        className="h-12 hidden dark:block"  
+                    />
                 </div>
-
 
                 <div className="text-center md:text-left">
                     <p className="text-sm">
-                        &copy; {new Date().getFullYear()} Techoberg. All rights reserved.
+                        &copy; {new Date().getFullYear()} Technoberg. All rights reserved.
                     </p>
                 </div>
 
-
                 <div className="flex space-x-6">
-
                     <a
                         href="https://yourwebsite.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-white transition duration-200 ease-in-out"
+                        className="hover:text-black dark:hover:text-white transition duration-200 ease-in-out"
                     >
                         <img src={icoon} alt="Website" className="h-10 w-10" />
                     </a>
@@ -33,7 +41,7 @@ const Footer = () => {
                         href="https://www.linkedin.com/in/yourprofile"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-white transition duration-200 ease-in-out"
+                        className="hover:text-black dark:hover:text-white transition duration-200 ease-in-out"
                     >
                         <img src={icoon} alt="LinkedIn" className="h-10 w-10" />
                     </a>
@@ -42,7 +50,7 @@ const Footer = () => {
                         href="https://www.facebook.com/yourprofile"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-white transition duration-200 ease-in-out"
+                        className="hover:text-black dark:hover:text-white transition duration-200 ease-in-out"
                     >
                         <img src={icoon} alt="Facebook" className="h-10 w-10" />
                     </a>
