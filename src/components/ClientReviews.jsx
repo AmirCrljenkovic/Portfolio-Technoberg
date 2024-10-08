@@ -21,7 +21,6 @@ const ClientReviews = () => {
             let clientCountCurrent = 0;
             let projectCountCurrent = 0;
 
-            
             const clientInterval = setInterval(() => {
                 clientCountCurrent += 1;
                 setClientCount(clientCountCurrent);
@@ -67,7 +66,7 @@ const ClientReviews = () => {
     }, []);
 
     return (
-        <section id="client-reviews" className="relative bg-gray-100 py-12">
+        <section id="client-reviews" className="relative bg-gray-100 dark:bg-[#222831] py-12">
             <div className="relative">
                 <div 
                     className="bg-cover bg-center h-[600px] bg-fixed" 
@@ -92,16 +91,19 @@ const ClientReviews = () => {
                     <div className="absolute bottom-0 w-full flex flex-col justify-center items-center pb-8">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-11/12">
                             {reviews.map((review, index) => (
-                                <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
-                                    <p className="text-gray-800 mb-4">"{review.text}"</p>
-                                    <span className="text-sm text-gray-500">- {review.company}</span>
+                                <div 
+                                    key={index} 
+                                    className="bg-white dark:bg-[#222831] p-6 rounded-lg shadow-md text-center transition-colors duration-300"
+                                >
+                                    <p className="text-gray-800 dark:text-gray-200 mb-4">"{review.text}"</p>
+                                    <span className="text-sm text-gray-500 dark:text-gray-400">- {review.company}</span>
                                 </div>
                             ))}
                         </div>
 
                         <div className="mt-12">
                             <Link to="/Reviews">
-                                <button className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300">
+                                <button className="bg-blue-500 dark:bg-[#222831] dark:hover:bg-gray-700 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300">
                                     View All Reviews
                                 </button>
                             </Link>

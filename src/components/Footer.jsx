@@ -4,11 +4,10 @@ import logoDark from "../img/Wit-liggend.png";
 
 const Footer = () => {
     return (
-        <footer className="bg-white dark:bg-[#222831] text-gray-800 dark:text-gray-400 py-8">
+        <footer className="bg-white dark:bg-[#1c1e21] text-gray-800 dark:text-gray-400 py-8">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 px-6">
 
                 <div className="flex-shrink-0">
-                    
                     <img
                         src={logoLight}
                         alt="Company Logo"
