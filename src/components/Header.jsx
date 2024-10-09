@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 import LightLogo from '../img/Wit-liggend.png';
 import DarkLogo from '../img/Rood-liggend.png';
-import SunIcon from '../img/sun.png';  
-import MoonIcon from '../img/moon.png'; 
+import SunIcon from '../img/sun.png';
+import MoonIcon from '../img/moon.png';
 
 const Header = () => {
     const [darkMode, setDarkMode] = useState(false);
@@ -25,7 +25,7 @@ const Header = () => {
 
     const goToHomeAndScroll = (section) => {
         navigate("/", { state: { scrollTo: section } });
-        setIsMobileMenuOpen(false); 
+        setIsMobileMenuOpen(false);
     };
 
     const toggleMobileMenu = () => {
@@ -35,15 +35,15 @@ const Header = () => {
     return (
         <header className="sticky top-0 z-50 bg-gray-100 dark:bg-darkbg text-black dark:text-white p-4 shadow-md">
             <div className="container mx-auto flex justify-between items-center md:justify-evenly">
-                
-                
+
+
                 <img
                     src={darkMode ? LightLogo : DarkLogo}
                     alt="Technoberg Logo"
                     className="h-10 w-auto"
                 />
-                
-                
+
+
                 <nav className="hidden md:flex space-x-4">
                     <button
                         onClick={() => goToHomeAndScroll("home")}
@@ -83,7 +83,7 @@ const Header = () => {
                     </a>
                 </nav>
 
-                
+
                 <div className="hidden md:flex">
                     <div
                         onClick={toggleDarkMode}
@@ -105,7 +105,7 @@ const Header = () => {
                     </div>
                 </div>
 
-                
+
                 <button
                     className="md:hidden focus:outline-none"
                     onClick={toggleMobileMenu}
@@ -126,10 +126,10 @@ const Header = () => {
                     </svg>
                 </button>
 
-                
                 {isMobileMenuOpen && (
                     <nav
-                        className="absolute top-16 left-0 w-full bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-darkbg dark:to-gray-800 rounded-lg shadow-lg transform transition-all duration-300 ease-in-out p-6 md:hidden flex flex-col justify-center items-center space-y-4"
+                        className={`absolute top-16 left-0 w-full bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 dark:bg-gradient-to-br dark:from-darkbg dark:to-gray-800 rounded-lg shadow-lg transform transition-transform duration-500 ease-in-out p-6 md:hidden flex flex-col justify-center items-center space-y-4 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+                        style={{ height: 'auto' }}
                     >
                         <button
                             onClick={() => goToHomeAndScroll("home")}
@@ -137,28 +137,28 @@ const Header = () => {
                         >
                             Home
                         </button>
-                    
+
                         <button
                             onClick={() => goToHomeAndScroll("about")}
                             className="hover:text-gray-600 dark:hover:text-gray-300 hover:underline transition-all duration-300"
                         >
                             About
                         </button>
-                    
+
                         <button
                             onClick={() => goToHomeAndScroll("projects")}
                             className="hover:text-gray-600 dark:hover:text-gray-300 hover:underline transition-all duration-300"
                         >
                             Projects
                         </button>
-                    
+
                         <button
                             onClick={() => goToHomeAndScroll("client-reviews")}
                             className="hover:text-gray-600 dark:hover:text-gray-300 hover:underline transition-all duration-300"
                         >
                             Reviews
                         </button>
-                    
+
                         <a
                             href="https://www.technoberg.nl/contact-us/"
                             target="_blank"
@@ -189,6 +189,8 @@ const Header = () => {
                         </div>
                     </nav>
                 )}
+
+
             </div>
         </header>
     );
