@@ -34,17 +34,18 @@ const Header = () => {
 
     return (
         <header className="sticky top-0 z-50 bg-gray-100 dark:bg-darkbg text-black dark:text-white p-4 shadow-md">
-            <div className="container mx-auto flex justify-between items-center md:justify-evenly">
+            <div className="container mx-auto flex items-center justify-between md:space-x-6">
+
+                <div className="flex-shrink-0">
+                    <img
+                        src={darkMode ? LightLogo : DarkLogo}
+                        alt="Technoberg Logo"
+                        className="h-10 w-auto"
+                    />
+                </div>
 
 
-                <img
-                    src={darkMode ? LightLogo : DarkLogo}
-                    alt="Technoberg Logo"
-                    className="h-10 w-auto"
-                />
-
-
-                <nav className="hidden md:flex space-x-4">
+                <nav className="hidden md:flex space-x-4 mx-auto">
                     <button
                         onClick={() => goToHomeAndScroll("home")}
                         className="hover:text-gray-400 cursor-pointer"
@@ -84,7 +85,7 @@ const Header = () => {
                 </nav>
 
 
-                <div className="hidden md:flex">
+                <div className="hidden md:flex flex-shrink-0">
                     <div
                         onClick={toggleDarkMode}
                         className="relative w-12 h-6 flex items-center bg-gray-300 dark:bg-[#31363F] rounded-full p-1 cursor-pointer transition-colors duration-300"
@@ -125,6 +126,7 @@ const Header = () => {
                         />
                     </svg>
                 </button>
+
 
                 {isMobileMenuOpen && (
                     <nav
@@ -168,7 +170,7 @@ const Header = () => {
                             Contact
                         </a>
 
-                        
+
                         <div
                             onClick={toggleDarkMode}
                             className="relative w-12 h-6 flex items-center bg-gray-300 dark:bg-[#31363F] rounded-full p-1 cursor-pointer transition-colors duration-300"
@@ -189,10 +191,9 @@ const Header = () => {
                         </div>
                     </nav>
                 )}
-
-
             </div>
         </header>
+
     );
 };
 
