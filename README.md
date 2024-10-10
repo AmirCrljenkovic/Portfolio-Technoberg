@@ -85,11 +85,6 @@ To run the project locally, follow these steps:
 
 ---
 
-## 🚀 Deployment
-
-This website can be deployed using various platforms like **Netlify**, **Vercel**, or **GitHub Pages**. After deploying, make sure to update the live demo link in the "Live Demo" section of this README.
-
----
 
 ## 👨‍💻 Credits
 
@@ -102,7 +97,7 @@ This project was developed by [**Amir Crljenkovic**](https://www.amircrljenkovic
 For any inquiries or suggestions, feel free to reach out:
 
 - **Email**: amircrljenkovic@outlook.com
-- **Website**: [https://your-portfolio-url.com](https://www.amircrljenkovic.nl)
+- **Website**: [https://www.amircrljenkovic.nl](https://www.amircrljenkovic.nl)
 
 ---
 
