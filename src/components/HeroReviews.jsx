@@ -13,7 +13,7 @@ const Hero = () => {
                 <h1 className="text/-4xl md:text-6xl font-bold mb-4">
                     Klanten Reviews
                 </h1>
-                
+
             </div>
         </section>
     );

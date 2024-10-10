@@ -1,6 +1,8 @@
 import icoon from "../img/icon.png";
-import logoLight from "../img/Rood-liggend.png";  
-import logoDark from "../img/Wit-liggend.png";   
+import facebookIcon from "../img/facebook.png"
+import linkedinIcon from "../img/linkedin.png"
+import logoLight from "../img/Rood-liggend.png";
+import logoDark from "../img/Wit-liggend.png";
 
 const Footer = () => {
     return (
@@ -11,12 +13,12 @@ const Footer = () => {
                     <img
                         src={logoLight}
                         alt="Company Logo"
-                        className="h-12 dark:hidden" 
+                        className="h-12 dark:hidden"
                     />
                     <img
                         src={logoDark}
                         alt="Company Logo"
-                        className="h-12 hidden dark:block"  
+                        className="h-12 hidden dark:block"
                     />
                 </div>
 
@@ -37,21 +39,21 @@ const Footer = () => {
                     </a>
 
                     <a
-                        href="https://www.linkedin.com/in/yourprofile"
+                        href="https://www.linkedin.com/company/technoberg/posts/?feedView=all"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-black dark:hover:text-white transition duration-200 ease-in-out"
                     >
-                        <img src={icoon} alt="LinkedIn" className="h-10 w-10" />
+                        <img src={linkedinIcon} alt="LinkedIn" className="h-10 w-10" />
                     </a>
 
                     <a
-                        href="https://www.facebook.com/yourprofile"
+                        href="https://www.facebook.com/technoberg/?locale=nl_NL"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-black dark:hover:text-white transition duration-200 ease-in-out"
                     >
-                        <img src={icoon} alt="Facebook" className="h-10 w-10" />
+                        <img src={facebookIcon} alt="Facebook" className="h-10 w-10" />
                     </a>
                 </div>
             </div>

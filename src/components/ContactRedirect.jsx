@@ -10,9 +10,9 @@ const ContactRedirect = () => {
         We kijken er naar uit om samen te werken aan een succesvol project!
       </p>
       <a
-        href="https://www.technoberg.nl/contact-us/" 
-        target="_blank" 
-        rel="noopener noreferrer" 
+        href="https://www.technoberg.nl/contact-us/"
+        target="_blank"
+        rel="noopener noreferrer"
         className="bg-[#F2911C] hover:bg-[#E05A00] text-white font-bold py-2 px-6 rounded-lg transition duration-300"
       >
         Neem contact op
