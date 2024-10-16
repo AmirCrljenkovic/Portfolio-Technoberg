@@ -100,12 +100,12 @@ const ProjectsPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-[#222831]"> {/* Light mode bg-gray-100, dark mode bg-[#222831] */}
       <Header />
       <Hero />
 
       <div className="flex justify-center my-8">
-        <h1 className="text-3xl font-bold">Projects</h1>
+        <h1 className="text-3xl font-bold dark:text-white">Projects</h1> {/* Adjust text color in dark mode */}
       </div>
 
       <div className="flex-grow px-4 lg:px-20 mb-12"> 
@@ -113,7 +113,7 @@ const ProjectsPage = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-[#E7215B] rounded-lg shadow-lg p-4 flex flex-col items-center transform transition duration-500 hover:scale-105 hover:shadow-xl cursor-pointer"
+              className="bg-white dark:bg-[#31363F] rounded-lg shadow-lg p-4 flex flex-col items-center transform transition duration-500 hover:scale-105 hover:shadow-xl cursor-pointer"
               onClick={() => openModal(project)}
             >
               <img
@@ -122,7 +122,7 @@ const ProjectsPage = () => {
                 className="rounded-t-lg w-full object-cover h-40"
               />
               <p className="text-sm mt-2 text-[#F2911C] font-semibold">{project.languages}</p>
-              <h2 className="text-xl font-bold text-white mt-2">{project.title}</h2>
+              <h2 className="text-xl font-bold text-black dark:text-white mt-2">{project.title}</h2> {/* Dark mode text */}
             </div>
           ))}
         </div>
@@ -130,10 +130,10 @@ const ProjectsPage = () => {
 
       {selectedProject && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 overflow-y-auto">
-          <div className="bg-white rounded-lg p-8 relative w-full max-w-4xl h-full overflow-y-auto">
+          <div className="bg-white dark:bg-[#31363F] rounded-lg p-8 relative w-full max-w-4xl h-full overflow-y-auto">
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 text-black text-4xl font-bold"
+              className="absolute top-4 right-4 text-black dark:text-white text-4xl font-bold"
             >
               &times;
             </button>
@@ -143,11 +143,11 @@ const ProjectsPage = () => {
                 alt={selectedProject.title}
                 className="rounded-lg w-full object-cover max-h-96 mb-6"
               />
-              <h2 className="text-3xl font-bold mb-4">{selectedProject.title}</h2>
+              <h2 className="text-3xl font-bold mb-4 dark:text-white">{selectedProject.title}</h2> {/* Dark mode text */}
               <p className="text-lg text-[#F2911C] font-semibold mb-2">{selectedProject.languages}</p>
-              <p className="text-xl mb-6">{selectedProject.description}</p>
-              <h3 className="text-2xl font-bold mb-4">Steps:</h3>
-              <pre className="text-lg mb-6 whitespace-pre-wrap">{selectedProject.steps}</pre>
+              <p className="text-xl mb-6 text-black dark:text-white">{selectedProject.description}</p> {/* Dark mode text */}
+              <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">Steps:</h3> {/* Dark mode text */}
+              <pre className="text-lg mb-6 whitespace-pre-wrap text-black dark:text-white">{selectedProject.steps}</pre> {/* Dark mode text */}
               <a
                 href={selectedProject.website}
                 target="_blank"
