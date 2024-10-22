@@ -1,3 +1,4 @@
+ {/* Dit is de section waar het team geintroduceert zou worden, dit was besproken om dit niet te laten zien op de website. */}
 import React from "react";
 
 const Team = () => {

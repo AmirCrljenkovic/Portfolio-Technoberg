@@ -23,7 +23,7 @@ const HomePage = () => {
                 <div className="bg-white dark:bg-[#222831]"> 
                     <Banner /> 
                 </div>
-                <Team />
+                {/* <Team /> */}
                 <MissionVision />
                 <Projects />
                 <Services />
