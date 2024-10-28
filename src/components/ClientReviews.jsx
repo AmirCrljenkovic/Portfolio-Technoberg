@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
 import heroImage from "../img/gradient-icons.png";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const reviews = [
     { text: "Techoberg's expertise helped us launch our app faster and more efficiently.", company: "Company A" },
     { text: "Professional and reliable team, exceeded our expectations!", company: "Company B" },
     { text: "Highly recommend Techoberg for any development needs.", company: "Company C" },
+    { text: "They turned our vision into a reality.", company: "Company D" },
+    { text: "Exceptional quality and attention to detail.", company: "Company E" },
+    { text: "Our go-to partner for all development needs.", company: "Company F" },
+    { text: "The best tech team we've worked with!", company: "Company G" },
+    { text: "They consistently deliver top-notch work.", company: "Company H" },
+    { text: "Highly recommend for their professionalism.", company: "Company I" },
 ];
 
 const ClientReviews = () => {
@@ -65,6 +74,16 @@ const ClientReviews = () => {
         };
     }, []);
 
+    const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 2000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+    };
+
     return (
         <section id="client-reviews" className="relative bg-gray-100 dark:bg-[#222831] py-12 overflow-hidden">
             <div className="relative">
@@ -72,15 +91,13 @@ const ClientReviews = () => {
                     className="bg-cover bg-center min-h-full bg-fixed flex flex-col justify-between"
                     style={{ backgroundImage: `url(${heroImage})` }}
                 >
-
                     <div className="absolute inset-0 bg-black opacity-30"></div>
-
-
                     <div className="relative z-10 text-center text-white px-4 pt-6 md:pt-12">
                         <h2 className="text-xl md:text-3xl font-bold">Tevreden klanten door heel Nederland</h2>
                     </div>
 
-
+                    {/* Commented out Client Count and Project Count section */}
+                    {/*
                     <div className="relative z-10 flex justify-between items-center text-white px-4 py-4">
                         <div className="flex justify-between w-full space-x-4 md:space-x-0 md:flex-row md:justify-around">
                             <div className="text-center mb-4 md:mb-0">
@@ -94,22 +111,29 @@ const ClientReviews = () => {
                             </div>
                         </div>
                     </div>
+                    */}
 
-
-                    <div className="relative z-10 w-full flex flex-col justify-center items-center pb-8 px-4">
-                        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 w-full max-w-screen-lg mx-auto px-4">
+                    <div className="relative z-10 w-full flex flex-col justify-center items-center pb-8 px-4 mt-8"> {/* Added 'mt-8' for spacing */}
+                        <Slider {...sliderSettings} className="w-full max-w-screen-lg mx-auto px-4">
                             {reviews.map((review, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-white dark:bg-[#222831] p-4 md:p-6 rounded-lg shadow-md text-center transition-colors duration-300"
-                                >
-                                    <p className="text-sm md:text-base text-gray-800 dark:text-gray-200 mb-2 md:mb-4">"{review.text}"</p>
-                                    <span className="text-xs md:text-sm text-gray-500 dark:text-gray-400">- {review.company}</span>
+                                <div key={index} className="px-2">
+                                    <div
+                                        style={{
+                                            minWidth: "280px",
+                                            maxWidth: "280px",
+                                            height: "200px",
+                                        }}
+                                        className="bg-white dark:bg-[#222831] p-4 rounded-lg shadow-md text-center transition-colors duration-300"
+                                    >
+                                        <p className="text-sm md:text-base text-gray-800 dark:text-gray-200 mb-2 md:mb-4">"{review.text}"</p>
+                                        <span className="text-xs md:text-sm text-gray-500 dark:text-gray-400">- {review.company}</span>
+                                    </div>
                                 </div>
                             ))}
-                        </div>
+                        </Slider>
 
-
+                        {/* Commented out Reviews button */}
+                        {/*
                         <div className="mt-6 md:mt-12">
                             <Link to="/Reviews">
                                 <button className="bg-blue-500 dark:bg-[#222831] dark:hover:bg-gray-700 text-white py-2 px-4 md:py-2 md:px-6 rounded-lg hover:bg-blue-600 transition duration-300">
@@ -117,6 +141,7 @@ const ClientReviews = () => {
                                 </button>
                             </Link>
                         </div>
+                        */}
                     </div>
                 </div>
             </div>
