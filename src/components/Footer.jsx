@@ -1,6 +1,8 @@
 import icoon from "../img/icon.png";
 import facebookIcon from "../img/facebook.png"
 import linkedinIcon from "../img/linkedin.png"
+import twitterIcon from "../img/twitter.png"
+import instagramIcon from "../img/instagram.png"
 import logoLight from "../img/Rood-liggend.png";
 import logoDark from "../img/Wit-liggend.png";
 
@@ -29,14 +31,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex space-x-6">
-                    <a
-                        href="https://yourwebsite.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-black dark:hover:text-white transition duration-200 ease-in-out"
-                    >
-                        <img src={icoon} alt="Website" className="h-10 w-10" />
-                    </a>
+
 
                     <a
                         href="https://www.linkedin.com/company/technoberg/posts/?feedView=all"
@@ -54,6 +49,22 @@ const Footer = () => {
                         className="hover:text-black dark:hover:text-white transition duration-200 ease-in-out"
                     >
                         <img src={facebookIcon} alt="Facebook" className="h-10 w-10" />
+                    </a>
+                    <a
+                        href="https://www.facebook.com/technoberg/?locale=nl_NL"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-black dark:hover:text-white transition duration-200 ease-in-out"
+                    >
+                        <img src={instagramIcon} alt="Facebook" className="h-10 w-10" />
+                    </a>
+                    <a
+                        href="https://yourwebsite.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-black dark:hover:text-white transition duration-200 ease-in-out"
+                    >
+                        <img src={twitterIcon} alt="Website" className="h-10 w-10" />
                     </a>
                 </div>
             </div>

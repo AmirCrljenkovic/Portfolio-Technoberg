@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
+import Slider from "react-slick"; 
 import Header from "../components/Header";
 import Hero from "../components/HeroProjects";
 import Footer from "../components/Footer";
 import ExampleProj from "../img/ExampleProject.webp";
-import ContactRedirect from "../components/ContactRedirect"; // Import the ContactRedirect component
+import ContactRedirect from "../components/ContactRedirect";
+
 
 const projects = [
   {
-    image: ExampleProj,
+    images: [ExampleProj, ExampleProj, ExampleProj], 
     languages: "HTML, CSS, JavaScript",
     title: "Project 1",
     description: "This is the first project.",
@@ -15,7 +17,7 @@ const projects = [
     website: "https://www.technoberg.nl"
   },
   {
-    image: ExampleProj,
+    images: [ExampleProj, ExampleProj, ExampleProj],
     languages: "React, Tailwind CSS",
     title: "Project 2",
     description: "This is the second project.",
@@ -23,7 +25,7 @@ const projects = [
     website: "https://www.technoberg.nl"
   },
   {
-    image: ExampleProj,
+    images: [ExampleProj, ExampleProj, ExampleProj],
     languages: "Node.js, Express",
     title: "Project 3",
     description: "This is the third project.",
@@ -31,7 +33,7 @@ const projects = [
     website: "https://www.technoberg.nl"
   },
   {
-    image: ExampleProj,
+    images: [ExampleProj, ExampleProj, ExampleProj],
     languages: "Python, Django",
     title: "Project 4",
     description: "This is the fourth project.",
@@ -39,7 +41,7 @@ const projects = [
     website: "https://www.technoberg.nl"
   },
   {
-    image: ExampleProj,
+    images: [ExampleProj, ExampleProj, ExampleProj],
     languages: "Ruby on Rails",
     title: "Project 5",
     description: "This is the fifth project.",
@@ -47,7 +49,7 @@ const projects = [
     website: "https://www.technoberg.nl"
   },
   {
-    image: ExampleProj,
+    images: [ExampleProj, ExampleProj, ExampleProj],
     languages: "Java, Spring Boot",
     title: "Project 6",
     description: "This is the sixth project.",
@@ -55,7 +57,7 @@ const projects = [
     website: "https://www.technoberg.nl"
   },
   {
-    image: ExampleProj,
+    images: [ExampleProj, ExampleProj, ExampleProj],
     languages: "PHP, Laravel",
     title: "Project 7",
     description: "This is the seventh project.",
@@ -63,7 +65,7 @@ const projects = [
     website: "https://www.technoberg.nl"
   },
   {
-    image: ExampleProj,
+    images: [ExampleProj, ExampleProj, ExampleProj],
     languages: "Vue.js, Vuex",
     title: "Project 8",
     description: "This is the eighth project.",
@@ -71,7 +73,7 @@ const projects = [
     website: "https://www.technoberg.nl"
   },
   {
-    image: ExampleProj,
+    images: [ExampleProj, ExampleProj, ExampleProj],
     languages: "Angular, TypeScript",
     title: "Project 9",
     description: "This is the ninth project.",
@@ -84,28 +86,29 @@ const ProjectsPage = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
-    if (selectedProject) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow = selectedProject ? "hidden" : "auto";
   }, [selectedProject]);
 
-  const openModal = (project) => {
-    setSelectedProject(project);
-  };
+  const openModal = (project) => setSelectedProject(project);
+  const closeModal = () => setSelectedProject(null);
 
-  const closeModal = () => {
-    setSelectedProject(null);
+  // Settings for the image slider
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-[#222831]"> {/* Light mode bg-gray-100, dark mode bg-[#222831] */}
+    <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-[#222831]">
       <Header />
       <Hero />
 
       <div className="flex justify-center my-8">
-        <h1 className="text-3xl font-bold dark:text-white">Projects</h1> {/* Adjust text color in dark mode */}
+        <h1 className="text-3xl font-bold dark:text-white">Projects</h1>
       </div>
 
       <div className="flex-grow px-4 lg:px-20 mb-12"> 
@@ -117,12 +120,12 @@ const ProjectsPage = () => {
               onClick={() => openModal(project)}
             >
               <img
-                src={project.image}
+                src={project.images[0]}
                 alt={project.title}
                 className="rounded-t-lg w-full object-cover h-40"
               />
               <p className="text-sm mt-2 text-[#F2911C] font-semibold">{project.languages}</p>
-              <h2 className="text-xl font-bold text-black dark:text-white mt-2">{project.title}</h2> {/* Dark mode text */}
+              <h2 className="text-xl font-bold text-black dark:text-white mt-2">{project.title}</h2>
             </div>
           ))}
         </div>
@@ -138,16 +141,23 @@ const ProjectsPage = () => {
               &times;
             </button>
             <div className="flex flex-col items-center">
-              <img
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                className="rounded-lg w-full object-cover max-h-96 mb-6"
-              />
-              <h2 className="text-3xl font-bold mb-4 dark:text-white">{selectedProject.title}</h2> {/* Dark mode text */}
+              
+              <Slider {...sliderSettings} className="w-full max-h-[500px] mb-6">
+                {selectedProject.images.map((img, idx) => (
+                  <div key={idx}>
+                    <img
+                      src={img}
+                      alt={`Slide ${idx + 1}`}
+                      className="rounded-lg w-full h-[400px] object-cover" 
+                    />
+                  </div>
+                ))}
+              </Slider>
+              <h2 className="text-3xl font-bold mb-4 dark:text-white">{selectedProject.title}</h2>
               <p className="text-lg text-[#F2911C] font-semibold mb-2">{selectedProject.languages}</p>
-              <p className="text-xl mb-6 text-black dark:text-white">{selectedProject.description}</p> {/* Dark mode text */}
-              <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">Steps:</h3> {/* Dark mode text */}
-              <pre className="text-lg mb-6 whitespace-pre-wrap text-black dark:text-white">{selectedProject.steps}</pre> {/* Dark mode text */}
+              <p className="text-xl mb-6 text-black dark:text-white">{selectedProject.description}</p>
+              <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">Steps:</h3>
+              <pre className="text-lg mb-6 whitespace-pre-wrap text-black dark:text-white">{selectedProject.steps}</pre>
               <a
                 href={selectedProject.website}
                 target="_blank"
@@ -161,7 +171,7 @@ const ProjectsPage = () => {
         </div>
       )}
 
-      <ContactRedirect /> {/* Add the ContactRedirect section here */}
+      <ContactRedirect />
       <Footer />
     </div>
   );
