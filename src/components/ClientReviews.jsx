@@ -82,6 +82,36 @@ const ClientReviews = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 5000,
+        responsive: [
+            // Responsive Slider settings.
+            {
+                breakpoint: 1024, 
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 800, 
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 785, 
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 600, 
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
 
     return (
@@ -96,34 +126,13 @@ const ClientReviews = () => {
                         <h2 className="text-xl md:text-3xl font-bold">Tevreden klanten door heel Nederland</h2>
                     </div>
 
-                    {/* Commented out Client Count and Project Count section */}
-                    {/*
-                    <div className="relative z-10 flex justify-between items-center text-white px-4 py-4">
-                        <div className="flex justify-between w-full space-x-4 md:space-x-0 md:flex-row md:justify-around">
-                            <div className="text-center mb-4 md:mb-0">
-                                <h3 className="text-sm md:text-2xl font-semibold">Client Count</h3>
-                                <p className="text-2xl md:text-5xl font-bold mt-1">{clientCount}+</p>
-                            </div>
-
-                            <div className="text-center">
-                                <h3 className="text-sm md:text-2xl font-semibold">Projects Count</h3>
-                                <p className="text-2xl md:text-5xl font-bold mt-1">{projectCount}+</p>
-                            </div>
-                        </div>
-                    </div>
-                    */}
-
-                    <div className="relative z-10 w-full flex flex-col justify-center items-center pb-8 px-4 mt-8"> {/* Added 'mt-8' for spacing */}
+                    <div className="relative z-10 w-full flex flex-col justify-center items-center pb-8 px-4 mt-8">
                         <Slider {...sliderSettings} className="w-full max-w-screen-lg mx-auto px-4">
                             {reviews.map((review, index) => (
                                 <div key={index} className="px-2">
                                     <div
-                                        style={{
-                                            minWidth: "280px",
-                                            maxWidth: "280px",
-                                            height: "200px",
-                                        }}
-                                        className="bg-white dark:bg-[#222831] p-4 rounded-lg shadow-md text-center transition-colors duration-300"
+                                        className="bg-white dark:bg-[#222831] p-4 rounded-lg shadow-md text-center transition-transform duration-300 mb-4 md:mb-0"
+                                        style={{ maxWidth: "100%", minWidth: "100%", height: "200px" }}
                                     >
                                         <p className="text-sm md:text-base text-gray-800 dark:text-gray-200 mb-2 md:mb-4">"{review.text}"</p>
                                         <span className="text-xs md:text-sm text-gray-500 dark:text-gray-400">- {review.company}</span>
@@ -131,17 +140,6 @@ const ClientReviews = () => {
                                 </div>
                             ))}
                         </Slider>
-
-                        {/* Commented out Reviews button */}
-                        {/*
-                        <div className="mt-6 md:mt-12">
-                            <Link to="/Reviews">
-                                <button className="bg-blue-500 dark:bg-[#222831] dark:hover:bg-gray-700 text-white py-2 px-4 md:py-2 md:px-6 rounded-lg hover:bg-blue-600 transition duration-300">
-                                    View All Reviews
-                                </button>
-                            </Link>
-                        </div>
-                        */}
                     </div>
                 </div>
             </div>

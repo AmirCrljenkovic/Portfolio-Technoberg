@@ -5,7 +5,7 @@ import Banner from "../components/Banner";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import About from "../components/About";
-import Team from "../components/Team";
+{/*import Team from "../components/Team"; */}
 import MissionVision from "../components/MissionVision";
 import Projects from "../components/Projects";
 import Services from "../components/Services";
