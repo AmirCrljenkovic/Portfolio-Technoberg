@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import icoon from "../img/icon.png";
+import icoon from "../img/icon.png"; // Placeholder icon; replace as needed
 
 const services = [
     { title: "Python", description: "We offer robust Python development services for web, data science, and automation." },
@@ -8,6 +8,15 @@ const services = [
     { title: "Node.js", description: "Server-side development using Node.js for scalable applications." },
     { title: "HTML5", description: "Expert HTML5 development for semantic and accessible web content." },
     { title: "CSS3", description: "Advanced CSS3 for visually appealing and responsive designs." },
+    { title: "TypeScript", description: "TypeScript development for enhanced code quality and productivity." },
+    { title: "Vue.js", description: "Building fast, reactive applications with Vue.js." },
+    { title: "Angular", description: "Angular expertise for complex and scalable applications." },
+    { title: "PHP", description: "Robust backend solutions using PHP." },
+    { title: "MySQL", description: "Relational database management with MySQL." },
+    { title: "MongoDB", description: "NoSQL database solutions with MongoDB." },
+    { title: "AWS", description: "Cloud computing solutions on AWS." },
+    { title: "Docker", description: "Containerization with Docker for consistent deployments." },
+    { title: "Kubernetes", description: "Orchestration with Kubernetes for scalable applications." }
 ];
 
 const Services = () => {
@@ -28,17 +37,16 @@ const Services = () => {
         <section id="services" className="bg-gray-100 dark:bg-[#222831] py-12">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center">Onze Diensten</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
                     {services.map((service, index) => (
-                        <div key={index} className="bg-white dark:bg-[#31363F] p-6 rounded-lg shadow-md text-center">
+                        <div 
+                            key={index} 
+                            className="bg-white dark:bg-[#31363F] p-6 rounded-lg shadow-md text-center"
+                            onClick={() => handleShowPopup(service)}
+                        >
+                            <img src={icoon} alt="Service Icon" className="w-12 h-12 mx-auto mb-2" />
                             <h3 className="text-xl font-semibold mb-2 dark:text-white">{service.title}</h3>
-                            <p className="text-gray-600 dark:text-gray-300 mb-4">{service.description}</p>
-                            <button
-                                onClick={() => handleShowPopup(service)}
-                                className="bg-blue-500 dark:bg-[#222831] hover:bg-blue-600 dark:hover:bg-[#393E46] text-white font-semibold py-2 px-4 rounded transition-colors duration-300"
-                            >
-                                Meer info
-                            </button>
+                            <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
                         </div>
                     ))}
                 </div>
