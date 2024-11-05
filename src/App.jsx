@@ -7,6 +7,9 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ClientReviewsPage from "./pages/ClientReviewsPage";
 // Remove the Banner import here
 // import Banner from "./components/Banner"; 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 
 function ScrollToSection() {
     const location = useLocation();
