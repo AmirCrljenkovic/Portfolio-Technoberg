@@ -5,8 +5,6 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ClientReviewsPage from "./pages/ClientReviewsPage";
-// Remove the Banner import here
-// import Banner from "./components/Banner"; 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -29,8 +27,7 @@ function ScrollToSection() {
 const App = () => {
   return (
     <>
-      {/* Remove the Banner here */}
-      {/* <Banner /> */}
+     
 
       <ScrollToSection />
       <Routes>
@@ -39,10 +36,7 @@ const App = () => {
         <Route path="/reviews" element={<ClientReviewsPage />} />
       </Routes>
 
-      {/* Also remove the fixed Banner at the bottom if it exists */}
-      {/* <div className="fixed bottom-0 w-full">
-        <Banner />
-      </div> */}
+      
     </>
   );
 };

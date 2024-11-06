@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Slider from "react-slick"; // Import Slider
+import Slider from "react-slick";
 import Header from "../components/Header";
 import Hero from "../components/HeroProjects";
 import Footer from "../components/Footer";
@@ -13,16 +13,18 @@ const ProjectsPage = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await client.getEntries({ content_type: "project" });
+        const response = await client.getEntries({ content_type: "projects" });
         const formattedProjects = response.items.map((item) => {
-          const { title, languages, description, steps, website, images } = item.fields;
+          const { title, languages, description, idea, website, images, functions } = item.fields;
+          console.log("Fetched project:", item.fields); // Log the project data
           return {
             title,
             languages,
             description,
-            steps,
+            idea,
             website,
-            images: images.map((img) => img.fields.file.url),
+            functions,
+            images: images ? images.map((img) => img.fields.file.url) : [],
           };
         });
         setProjects(formattedProjects);
@@ -30,6 +32,7 @@ const ProjectsPage = () => {
         console.error("Error fetching projects:", error);
       }
     };
+    
     fetchProjects();
   }, []);
 
@@ -43,6 +46,8 @@ const ProjectsPage = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
+    autoplay: true,           
+    autoplaySpeed: 3000,      
   };
 
   return (
@@ -83,7 +88,7 @@ const ProjectsPage = () => {
             </button>
             <div className="flex flex-col items-center">
               <Slider {...sliderSettings} className="w-full mb-6">
-                {selectedProject.images.map((img, idx) => (
+                {(selectedProject.images || []).map((img, idx) => (
                   <div key={idx} className="flex justify-center">
                     <img
                       src={img}
@@ -96,8 +101,26 @@ const ProjectsPage = () => {
               <h2 className="text-3xl font-bold mb-4 dark:text-white">{selectedProject.title}</h2>
               <p className="text-lg text-[#F2911C] font-semibold mb-2">{selectedProject.languages}</p>
               <p className="text-xl mb-6 text-black dark:text-white">{selectedProject.description}</p>
-              <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">Steps:</h3>
-              <pre className="text-lg mb-6 whitespace-pre-wrap text-black dark:text-white">{selectedProject.steps}</pre>
+              <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">Het Idee:</h3>
+              <p className="text-lg mb-6 text-black dark:text-white">
+                {selectedProject.idea}
+              </p>
+              <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">Functies:</h3>
+              {Array.isArray(selectedProject.functions) ? (
+                <ul className="mb-6 text-lg text-black dark:text-white space-y-2">
+                  {selectedProject.functions.map((func, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <span className="mr-2 text-[#F2911C]">•</span>
+                      <span>{func}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="mb-6 text-lg text-black dark:text-white">
+                  {selectedProject.functions}
+                </p>
+              )}
+
               <a
                 href={selectedProject.website}
                 target="_blank"
