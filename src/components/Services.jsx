@@ -12,11 +12,7 @@ const services = [
     { title: "Vue.js", description: "Building fast, reactive applications with Vue.js." },
     { title: "Angular", description: "Angular expertise for complex and scalable applications." },
     { title: "PHP", description: "Robust backend solutions using PHP." },
-    { title: "MySQL", description: "Relational database management with MySQL." },
-    { title: "MongoDB", description: "NoSQL database solutions with MongoDB." },
-    { title: "AWS", description: "Cloud computing solutions on AWS." },
-    { title: "Docker", description: "Containerization with Docker for consistent deployments." },
-    { title: "Kubernetes", description: "Orchestration with Kubernetes for scalable applications." }
+    
 ];
 
 const Services = () => {

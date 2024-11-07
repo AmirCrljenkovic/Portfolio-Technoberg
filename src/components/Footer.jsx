@@ -51,7 +51,7 @@ const Footer = () => {
                         <img src={facebookIcon} alt="Facebook" className="h-10 w-10" />
                     </a>
                     <a
-                        href="https://www.facebook.com/technoberg/?locale=nl_NL"
+                        href="https://www.instagram.com/technoberg/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-black dark:hover:text-white transition duration-200 ease-in-out"
@@ -59,7 +59,7 @@ const Footer = () => {
                         <img src={instagramIcon} alt="Facebook" className="h-10 w-10" />
                     </a>
                     <a
-                        href="https://yourwebsite.com"
+                        href="https://x.com/technoberg"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-black dark:hover:text-white transition duration-200 ease-in-out"
