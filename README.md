@@ -1,6 +1,6 @@
-# 🌐 Technoberg Development - Portfolio Website
+# 🌐 Technoberg – Enterprise IT voor MKB - Portfolio Website
 
-Welcome to the **Technoberg Development** portfolio website. This site showcases the expertise, projects, and client reviews of the Technoberg Development team, built to represent our skills and dedication to building the future with code.
+Welcome to the **Technoberg – Enterprise IT voor MKB** portfolio website. This site showcases the expertise, projects, and client reviews of the Technoberg Development team, built to represent our skills and dedication to building the future with code.
 
 ---
 
@@ -111,7 +111,7 @@ For any inquiries or suggestions, feel free to reach out:
 
 ## 📜 Copyright & Usage
 
-© 2024 Technoberg Development. All rights reserved.
+© 2024 Technoberg – Enterprise IT voor MKB. All rights reserved.
 
 This project and its source code are proprietary and are not open source. Any use, reproduction, or distribution of this software is prohibited without explicit written permission from Technoberg Development. Unauthorized duplication, modification, or sharing of any part of this website or its content is strictly prohibited.
 
