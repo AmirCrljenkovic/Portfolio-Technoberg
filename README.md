@@ -4,7 +4,7 @@ Welcome to the **Technoberg Development** portfolio website. This site showcases
 
 ---
 
-## 🌟 Live Demo
+## 🌟 Technoberg
 [Visit the site here!](your-live-site-url-here)
 
 ---
@@ -55,42 +55,6 @@ This website was built using modern technologies to ensure a fast, scalable, and
 ## 📱 Mobile-First Design
 
 The website is designed with a **mobile-first approach**, ensuring that all sections fit seamlessly on smaller screens. The burger menu stays clickable, and important information is arranged efficiently.
-
----
-
-## 📋 Installation & Setup
-
-To run the project locally, follow these steps:
-
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/your-username/Technoberg-Development.git
-    ```
-
-2. **Navigate into the directory**:
-    ```bash
-    cd Technoberg-Development
-    ```
-
-3. **Install dependencies**:
-    ```bash
-    npm install
-    ```
-
-4. **Set up Contentful**:
-    - Create a Contentful account and set up a space for your project content.
-    - Create a `project` content type in Contentful to hold information for each project.
-    - Add required fields such as title, description, image(s), and any other relevant information.
-    - Obtain your Contentful space ID and access token, and set them up in a `.env` file:
-      ```bash
-      VITE_CONTENTFUL_SPACE_ID=your_space_id
-      VITE_CONTENTFUL_ACCESS_TOKEN=your_access_token
-      ```
-
-5. **Start the development server**:
-    ```bash
-    npm run dev
-    ```
 
 ---
 
