@@ -4,7 +4,7 @@ Welcome to the **Technoberg Development** portfolio website. This site showcases
 
 ---
 
-## 🌟 Technoberg
+## 🌟 Live Demo
 [Visit the site here!](your-live-site-url-here)
 
 ---
@@ -58,6 +58,42 @@ The website is designed with a **mobile-first approach**, ensuring that all sect
 
 ---
 
+## 📋 Installation & Setup
+
+To run the project locally, follow these steps:
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/Technoberg-Development.git
+    ```
+
+2. **Navigate into the directory**:
+    ```bash
+    cd Technoberg-Development
+    ```
+
+3. **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+4. **Set up Contentful**:
+    - Create a Contentful account and set up a space for your project content.
+    - Create a `project` content type in Contentful to hold information for each project.
+    - Add required fields such as title, description, image(s), and any other relevant information.
+    - Obtain your Contentful space ID and access token, and set them up in a `.env` file:
+      ```bash
+      VITE_CONTENTFUL_SPACE_ID=your_space_id
+      VITE_CONTENTFUL_ACCESS_TOKEN=your_access_token
+      ```
+
+5. **Start the development server**:
+    ```bash
+    npm run dev
+    ```
+
+---
+
 ## 👨‍💻 Credits
 
 This project was developed by [**Amir Crljenkovic**](https://www.amircrljenkovic.nl) as part of an internship at **Technoberg Development**. Special thanks to the team for their collaboration and insights!
@@ -73,6 +109,11 @@ For any inquiries or suggestions, feel free to reach out:
 
 ---
 
-## 📜 License
+## 📜 Copyright & Usage
 
-This project is licensed under the [MIT License](LICENSE).
+© [Year] Technoberg Development. All rights reserved.
+
+This project and its source code are proprietary and are not open source. Any use, reproduction, or distribution of this software is prohibited without explicit written permission from Technoberg Development. Unauthorized duplication, modification, or sharing of any part of this website or its content is strictly prohibited.
+
+---
+
