@@ -1,8 +1,6 @@
-
 # 🌐 Technoberg Development - Portfolio Website
 
 Welcome to the **Technoberg Development** portfolio website. This site showcases the expertise, projects, and client reviews of the Technoberg Development team, built to represent our skills and dedication to building the future with code.
-
 
 ---
 
@@ -21,6 +19,7 @@ This website was built using modern technologies to ensure a fast, scalable, and
 - **React Router**: For client-side routing and seamless navigation.
 - **React Slick**: A carousel slider for displaying projects in an interactive way.
 - **FontAwesome**: Icon library for the visual design of services, skills, and more.
+- **Contentful**: Headless CMS for managing project content dynamically without hardcoding, allowing easy updates to the Projects section.
 
 ---
 
@@ -37,7 +36,7 @@ This website was built using modern technologies to ensure a fast, scalable, and
 - Showcases the services offered in a grid layout, each card containing an icon, title, description, and a call-to-action button.
 
 ### 4. **Projects Carousel**
-- A responsive carousel slider in the Projects section, displaying the team's best work.
+- A responsive carousel slider in the Projects section, dynamically displaying the team's best work by pulling data from **Contentful**. This allows the team to add and update project cards from Contentful without changing code.
 
 ### 5. **Client Reviews**
 - An interactive reviews section where clients can see past reviews, complete with company logos, review details, and a smooth hover effect.
@@ -78,13 +77,22 @@ To run the project locally, follow these steps:
     npm install
     ```
 
-4. **Start the development server**:
+4. **Set up Contentful**:
+    - Create a Contentful account and set up a space for your project content.
+    - Create a `project` content type in Contentful to hold information for each project.
+    - Add required fields such as title, description, image(s), and any other relevant information.
+    - Obtain your Contentful space ID and access token, and set them up in a `.env` file:
+      ```bash
+      VITE_CONTENTFUL_SPACE_ID=your_space_id
+      VITE_CONTENTFUL_ACCESS_TOKEN=your_access_token
+      ```
+
+5. **Start the development server**:
     ```bash
     npm run dev
     ```
 
 ---
-
 
 ## 👨‍💻 Credits
 
