@@ -111,7 +111,7 @@ For any inquiries or suggestions, feel free to reach out:
 
 ## 📜 Copyright & Usage
 
-© [Year] Technoberg Development. All rights reserved.
+© 2024 Technoberg Development. All rights reserved.
 
 This project and its source code are proprietary and are not open source. Any use, reproduction, or distribution of this software is prohibited without explicit written permission from Technoberg Development. Unauthorized duplication, modification, or sharing of any part of this website or its content is strictly prohibited.
 
