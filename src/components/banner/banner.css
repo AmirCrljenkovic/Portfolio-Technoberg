@@ -1,0 +1,31 @@
+@keyframes scroll-logos {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.banner-container {
+    position: relative;
+}
+
+.banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.banner-logos {
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-track {
+    display: flex;
+    animation: scroll-logos 15s linear infinite;
+}
