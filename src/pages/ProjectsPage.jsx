@@ -82,7 +82,7 @@ const ProjectsPage = () => {
           <div className="bg-white dark:bg-[#31363F] rounded-lg p-8 relative w-full max-w-4xl max-h-full overflow-auto">
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 text-black dark:text-white text-4xl font-bold"
+              className="absolute top-4 right-1 text-black dark:text-white text-4xl font-bold"
             >
               &times;
             </button>

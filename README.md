@@ -42,7 +42,7 @@ This website was built using modern technologies to ensure a fast, scalable, and
 - An interactive reviews section where clients can see past reviews, complete with company logos, review details, and a smooth hover effect.
 
 ### 6. **Animated Banner**
-- A rotating banner under the "About Us" section, resembling police tape but filled with rotating logos that continuously animate from right to left.
+- A rotating banner under the "About Us" section, resembling police tape but filled with rotating logos that continuously animate from right to left. The logos scroll smoothly, creating a seamless loop effect that keeps the viewer engaged.
 
 ### 7. **Dark Mode**
 - A switch in the header toggles between light and dark mode, adjusting the entire website's look and feel.
@@ -116,4 +116,3 @@ For any inquiries or suggestions, feel free to reach out:
 This project and its source code are proprietary and are not open source. Any use, reproduction, or distribution of this software is prohibited without explicit written permission from Technoberg Development. Unauthorized duplication, modification, or sharing of any part of this website or its content is strictly prohibited.
 
 ---
-
