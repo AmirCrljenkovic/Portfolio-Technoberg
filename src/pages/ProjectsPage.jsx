@@ -16,7 +16,7 @@ const ProjectsPage = () => {
         const response = await client.getEntries({ content_type: "projects" });
         const formattedProjects = response.items.map((item) => {
           const { title, languages, description, idea, website, images, functions } = item.fields;
-          console.log("Fetched project:", item.fields); // Log the project data
+          console.log("Fetched project:", item.fields);
           return {
             title,
             languages,
@@ -46,12 +46,12 @@ const ProjectsPage = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: true,           
-    autoplaySpeed: 3000,      
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-[#222831]">
+    <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-[#18191B]">
       <Header />
       <Hero />
       <div className="flex justify-center my-8">
@@ -62,7 +62,7 @@ const ProjectsPage = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-[#31363F] rounded-lg shadow-lg p-4 flex flex-col items-center transform transition duration-500 hover:scale-105 hover:shadow-xl cursor-pointer"
+              className="bg-white dark:bg-[#222529] rounded-lg shadow-lg p-4 flex flex-col items-center transform transition duration-500 hover:scale-105 hover:shadow-xl cursor-pointer"
               onClick={() => openModal(project)}
             >
               <img
@@ -79,7 +79,7 @@ const ProjectsPage = () => {
 
       {selectedProject && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 overflow-y-auto">
-          <div className="bg-white dark:bg-[#31363F] rounded-lg p-8 relative w-full max-w-4xl max-h-full overflow-auto">
+          <div className="bg-white dark:bg-[#222529] rounded-lg p-8 relative w-full max-w-4xl max-h-full overflow-auto">
             <button
               onClick={closeModal}
               className="absolute top-4 right-1 text-black dark:text-white text-4xl font-bold"
