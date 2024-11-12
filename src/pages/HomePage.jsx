@@ -20,7 +20,7 @@ const HomePage = () => {
                 <Hero />
                 <About />
                 
-                <div className="bg-white dark:bg-[#222831]"> 
+                <div className="bg-white dark:bg-[#18191B]"> 
                     <Banner /> 
                 </div>
                 {/* <Team /> */}

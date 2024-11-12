@@ -15,7 +15,7 @@ const Hero = () => {
     return (
         <section
             id="home"
-            className="relative bg-cover bg-center min-h-screen flex items-center"
+            className="relative bg-cover bg-center min-h-screen flex items-center dark:bg-[#18191B]"
             style={{ backgroundImage: `url(${heroImage})` }}
         >
             <div className="absolute inset-0 bg-black opacity-25 z-0"></div>
@@ -44,10 +44,9 @@ const Hero = () => {
                     Wij bouwen de toekomst met code!
                 </p>
 
-
                 <button
                     onClick={() => scrollToSection("about")}
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg dark:bg-[#222831] dark:text-white dark:hover:bg-gray-800 transition duration-300"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg dark:bg-[#18191B] dark:text-white dark:hover:bg-gray-800 transition duration-300"
                     style={{ marginTop: '40px', marginBottom: '40px' }}
                 >
                     Ontdek Meer

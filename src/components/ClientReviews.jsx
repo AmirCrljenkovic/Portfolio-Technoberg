@@ -83,29 +83,28 @@ const ClientReviews = () => {
         autoplay: true,
         autoplaySpeed: 5000,
         responsive: [
-            // Responsive Slider settings.
             {
-                breakpoint: 1024, 
+                breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
                 },
             },
             {
-                breakpoint: 800, 
+                breakpoint: 800,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                 },
             },
             {
-                breakpoint: 785, 
+                breakpoint: 785,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                 },
             },
             {
-                breakpoint: 600, 
+                breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -115,7 +114,7 @@ const ClientReviews = () => {
     };
 
     return (
-        <section id="client-reviews" className="relative bg-gray-100 dark:bg-[#222831] py-12 overflow-hidden">
+        <section id="client-reviews" className="relative bg-gray-100 dark:bg-[#18191B] py-12 overflow-hidden">
             <div className="relative">
                 <div
                     className="bg-cover bg-center min-h-full bg-fixed flex flex-col justify-between"
@@ -131,7 +130,7 @@ const ClientReviews = () => {
                             {reviews.map((review, index) => (
                                 <div key={index} className="px-2">
                                     <div
-                                        className="bg-white dark:bg-[#222831] p-4 rounded-lg shadow-md text-center transition-transform duration-300 mb-4 md:mb-0"
+                                        className="bg-white dark:bg-[#222529] p-4 rounded-lg shadow-md text-center transition-transform duration-300 mb-4 md:mb-0"
                                         style={{ maxWidth: "100%", minWidth: "100%", height: "200px" }}
                                     >
                                         <p className="text-sm md:text-base text-gray-800 dark:text-gray-200 mb-2 md:mb-4">"{review.text}"</p>

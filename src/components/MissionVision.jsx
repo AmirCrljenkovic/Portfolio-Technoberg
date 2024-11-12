@@ -4,7 +4,7 @@ const MissionVision = () => {
   return (
     <section
       id="mission-vision"
-      className="pt-20 pb-20 flex flex-col justify-center bg-gray-50 dark:bg-[#31363F]"
+      className="pt-20 pb-20 flex flex-col justify-center bg-gray-50 dark:bg-[#18191B]"
     >
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">

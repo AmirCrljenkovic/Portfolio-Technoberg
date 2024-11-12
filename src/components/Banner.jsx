@@ -6,7 +6,7 @@ import "../components/banner/banner.css";
 const Banner = () => {
     return (
         <div
-            className="banner-container relative w-screen h-16 overflow-hidden dark:bg-[#222831]"
+            className="banner-container relative w-screen h-16 overflow-hidden dark:bg-[#18191B]"
             style={{
                 transform: 'rotate(-5deg)',
                 marginLeft: '-50vw',

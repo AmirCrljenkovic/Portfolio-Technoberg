@@ -39,7 +39,7 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="bg-gray-100 dark:bg-[#222831] py-12">
+        <section id="projects" className="bg-gray-100 dark:bg-[#222529] py-12">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center">
                     Onze Projecten
