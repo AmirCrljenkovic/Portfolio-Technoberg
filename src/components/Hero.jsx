@@ -4,7 +4,6 @@ import cloudImage from "../img/cloud-bg-home.png";
 import cloudImageDark from "../img/cloud-bg-home-dark.png";
 
 const Hero = () => {
-
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -46,7 +45,7 @@ const Hero = () => {
 
                 <button
                     onClick={() => scrollToSection("about")}
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg dark:bg-[#18191B] dark:text-white dark:hover:bg-gray-800 transition duration-300"
+                    className="bg-[#F3911B] hover:bg-[#E67E2B] text-white font-bold py-2 px-6 rounded-lg transition duration-300 dark:bg-[#F3911B] dark:text-white dark:hover:bg-[#E67E2B]"
                     style={{ marginTop: '40px', marginBottom: '40px' }}
                 >
                     Ontdek Meer

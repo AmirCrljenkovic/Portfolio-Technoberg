@@ -4,7 +4,7 @@ const ContactRedirect = () => {
   return (
     <div className="bg-gray-100 dark:bg-[#18191B] py-12 px-4 text-center">
       <h2 className="text-2xl font-bold mb-4 dark:text-white">
-        Als je geïnteresseerd bent in wat je hier ziet, neem contact met ons op om te bespreken wat wij voor u kunnen betekenen.
+        Bent u geintereseerd in 1 van onze projecten? , neem contact met ons op om te bespreken wat wij voor u kunnen betekenen.
       </h2>
       <p className="text-lg mb-6 dark:text-gray-300">
         We kijken er naar uit om samen te werken aan een succesvol project!

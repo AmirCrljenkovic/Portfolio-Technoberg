@@ -65,7 +65,7 @@ const Projects = () => {
                 <div className="text-center mt-8">
                     <Link
                         to="/projects"
-                        className="bg-blue-500 dark:bg-blue-700 hover:bg-blue-600 dark:hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded"
+                        className="bg-[#F3911B] dark:bg-[#F3911B] hover:bg-[#E67E2B] dark:hover:bg-[#E67E2B] text-white font-semibold py-2 px-6 rounded transition duration-300"
                     >
                         See All
                     </Link>

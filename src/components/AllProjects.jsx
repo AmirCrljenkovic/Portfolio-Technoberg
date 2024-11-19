@@ -50,6 +50,14 @@ const AllProjects = () => {
                         </div>
                     ))}
                 </div>
+                <div className="text-center mt-8">
+                    <a
+                        href="/projects"
+                        className="bg-[#F3911B] dark:bg-[#F3911B] hover:bg-[#E67E2B] dark:hover:bg-[#E67E2B] text-white font-semibold py-2 px-6 rounded transition duration-300"
+                    >
+                        See All
+                    </a>
+                </div>
             </div>
         </section>
     );
