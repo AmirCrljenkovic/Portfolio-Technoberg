@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darkbg: '#222831', // Custom dark mode background color
+        darkbg: '#222831', 
       },
       keyframes: {
         scrollTape: {
@@ -16,11 +16,13 @@ module.exports = {
         },
       },
       animation: {
-        'scroll-tape': 'scrollTape 10s linear infinite', // Adjust the duration as needed
+        'scroll-tape': 'scrollTape 10s linear infinite', 
+      },
+      fontFamily: {
+        sans: ['Ubuntu', 'sans-serif'], 
       },
     },
   },
-  darkMode: 'class', // Enable class-based dark mode
+  darkMode: 'class', 
   plugins: [],
 };
-
