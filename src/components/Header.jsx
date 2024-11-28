@@ -37,11 +37,16 @@ const Header = () => {
             <div className="container mx-auto flex items-center justify-between md:space-x-6">
 
                 <div className="flex-shrink-0">
-                    <img
-                        src={darkMode ? LightLogo : DarkLogo}
-                        alt="Technoberg Logo"
-                        className="h-10 w-auto"
-                    />
+                    <button
+                        onClick={() => goToHomeAndScroll("home")}
+                        className="focus:outline-none"
+                    >
+                        <img
+                            src={darkMode ? LightLogo : DarkLogo}
+                            alt="Technoberg Logo"
+                            className="h-10 w-auto"
+                        />
+                    </button>
                 </div>
 
                 <nav className="hidden md:flex space-x-4 mx-auto">
