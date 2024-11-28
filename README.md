@@ -25,29 +25,32 @@ This website was built using modern technologies to ensure a fast, scalable, and
 
 ## 🎨 Key Features
 
-### 1. **Hero Section**
+### 1. **Clickable Logo**
+- The logo in the header is now clickable and brings the user back to the top of the homepage with **smooth scrolling** functionality. This ensures quick and seamless navigation to the main section of the website.
+
+### 2. **Hero Section**
 - A full-screen hero section with a captivating background image, dynamic cloud animation, and a call-to-action button (`Ontdek Meer`) that smoothly scrolls to the "About Us" section.
 - Dark mode support with different background images for light and dark themes.
 
-### 2. **About Us Section**
+### 3. **About Us Section**
 - Provides a detailed description of who we are and what we do, with smooth scrolling from the hero section.
 
-### 3. **Services Section**
+### 4. **Services Section**
 - Showcases the services offered in a grid layout, each card containing an icon, title, description, and a call-to-action button.
 
-### 4. **Projects Carousel**
+### 5. **Projects Carousel**
 - A responsive carousel slider in the Projects section, dynamically displaying the team's best work by pulling data from **Contentful**. This allows the team to add and update project cards from Contentful without changing code.
 
-### 5. **Client Reviews**
+### 6. **Client Reviews**
 - An interactive reviews section where clients can see past reviews, complete with company logos, review details, and a smooth hover effect.
 
-### 6. **Animated Banner**
+### 7. **Animated Banner**
 - A rotating banner under the "About Us" section, resembling police tape but filled with rotating logos that continuously animate from right to left. The logos scroll smoothly, creating a seamless loop effect that keeps the viewer engaged.
 
-### 7. **Dark Mode**
+### 8. **Dark Mode**
 - A switch in the header toggles between light and dark mode, adjusting the entire website's look and feel.
 
-### 8. **Mobile Responsiveness**
+### 9. **Mobile Responsiveness**
 - Mobile-friendly navigation and layout, including a collapsible burger menu and adaptive sections that adjust to different screen sizes.
 
 ---
